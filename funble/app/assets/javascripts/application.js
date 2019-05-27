@@ -14,3 +14,16 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+function menuTrigger() {
+	y = document.getElementsByClassName('side_bar');
+	z = document.getElementsByClassName("overlay");
+	x =	document.getElementsByClassName("menu_icon");
+	//b1 = document.getElementsByClassName("bar1");
+	//b2 = document.getElementsByClassName("bar3");
+
+ 	x[0].classList.toggle("change");
+ 	y[0].classList.toggle("translate");
+ 	z[0].classList.toggle("fade");
+ 	//b1[0].classList.toggle("change");
+ 	//b2[0].classList.toggle("change");
+}
