@@ -23,8 +23,8 @@
         <div class="side_bar_popular">my rooms section</div>
         <div class="side_bar_popular">joined rooms section</div>
         <div class="side_bar_popular">other sections to be added</div>
-      </div> 
-      <div class="overlay" onclick="menuTrigger()"></div>  
+      </div>
+      <div class="overlay" onclick="menuTrigger()"></div>
         <div class="header">
           <div class="header_container">
              <div class="menu_icon" onclick="menuTrigger()">
@@ -40,8 +40,9 @@
             <div class="exlisu">
               <button class="explore_button"><i class="far fa-compass"></i></button>
               <div class="sign_up_login">
-                <button type="button" class="log_in">Log in</button>
-                <button type="button" class="sign_up">Sign up</button>
+                <button  type="button" class="log_in"><%= link_to "Sign In", new_user_session_path%></button>
+                <button type="button" class="sign_up"><%= link_to "Sign up", new_user_registration_path%></button>
+                <button type="button" class="sign_up"><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></button>
               </div>
             </div>
           </div>
@@ -51,6 +52,8 @@
           <div class="general">general</div>
           <div class="messages">messages are gonna be displayed here<div class="new_message">new message</div></div>
           <div class="room_users">all users in room</div>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
         </div>
       <%= yield %>
 
