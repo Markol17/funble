@@ -1,22 +1,89 @@
+
+<% if false %>
+  <!-- <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Funble</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+      <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+    </head>
+
+    <body>
+       <div class="wrapper">
+        <div class="side_bar">
+          <div class="side_bar_popular">popular section</div>
+          <div class="side_bar_popular">my rooms section</div>
+          <div class="side_bar_popular">joined rooms section</div>
+          <div class="side_bar_popular">other sections to be added</div>
+        </div>
+        <div class="overlay" onclick="menuTrigger()"></div>
+          <div class="header">
+            <div class="header_container">
+               <div class="menu_icon" onclick="menuTrigger()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+              <%=image_tag("logo.svg", alt: "logo", class:"logo")%>
+              <div class="search">
+                <input type="text" placeholder="Find a recruiter" class="search_input">
+                <button type="button" class="search_button"><i class="fa fa-search"></i></button>
+              </div>
+              <div class="exlisu">
+                <button class="explore_button"><i class="far fa-compass"></i></button>
+                <div class="sign_up_login">
+                  <button type="button" class="log_in">Log in</button>
+                  <button type="button" class="sign_up">Sign up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+         this part is not gonna be in this file but for now I'll keep it there (the css for this part is all in this file)
+          <div class="body">
+            <div class="general">general</div>
+            <div class="messages">messages are gonna be displayed here<div class="new_message">new message</div></div>
+            <div class="room_users">all users in room</div>
+          </div>
+        <%= yield %>
+
+      </div>
+    </body>
+  </html> -->
+<% end %>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Funble</title>
+    <title>RailsChatTutorial</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:600" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
-
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <%= render partial: 'shared/navigation_bar' %>
+          <div class="my-3">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+
      <div class="wrapper">
       <div class="side_bar">
         <div class="side_bar_popular">popular section</div>
