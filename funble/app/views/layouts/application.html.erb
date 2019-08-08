@@ -73,6 +73,7 @@
   </head>
 
   <body>
+
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -82,6 +83,47 @@
           </div>
         </div>
       </div>
+
+     <div class="wrapper">
+      <div class="side_bar">
+        <div class="side_bar_popular">popular section</div>
+        <div class="side_bar_popular">my rooms section</div>
+        <div class="side_bar_popular">joined rooms section</div>
+        <div class="side_bar_popular">other sections to be added</div>
+      </div>
+      <div class="overlay" onclick="menuTrigger()"></div>
+        <div class="header">
+          <div class="header_container">
+             <div class="menu_icon" onclick="menuTrigger()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <%=image_tag("logo.svg", alt: "logo", class:"logo")%>
+            <div class="search">
+              <input type="text" placeholder="Find a recruiter" class="search_input">
+              <button type="button" class="search_button"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="exlisu">
+              <button class="explore_button"><i class="far fa-compass"></i></button>
+              <div class="sign_up_login">
+                <button  type="button" class="log_in"><%= link_to "Sign In", new_user_session_path%></button>
+                <button type="button" class="sign_up"><%= link_to "Sign up", new_user_registration_path%></button>
+                <button type="button" class="sign_up"><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- this part is not gonna be in this file but for now I'll keep it there (the css for this part is all in this file)-->
+        <div class="body">
+          <div class="general">general</div>
+          <div class="messages">messages are gonna be displayed here<div class="new_message">new message</div></div>
+          <div class="room_users">all users in room</div>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      <%= yield %>
+
     </div>
   </body>
 </html>
