@@ -1,5 +1,6 @@
-<h2>Forgot your password?</h2>
-
+<div class="container input-box">
+<%= image_tag("logo.svg", :alt => "Funble", :class => "logo") %>
+<p class="input-box-p my-4 text-center">Forgot Password?</p>
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
 
@@ -7,7 +8,9 @@
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" } %>
+                input_html: { autocomplete: "email" },
+                label: false,
+                placeholder: "Email" %>
   </div>
 
   <div class="form-actions">
@@ -16,3 +19,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

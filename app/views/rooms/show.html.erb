@@ -10,15 +10,38 @@
   <div class="col">
     <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
       <% @room_messages.each do |room_message| %>
+        <% if room_message.user.id == @currentUser %>
+          <div class="chat-message-container">
+            <div class="row no-gutters ">
+              <div class="col-auto text-center">
+                <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
+              </div>
+
+              <div class="col">
+                <div class="message-content">
+                  <p class="mb-2">
+                    <%= room_message.message %>
+                  </p>
+
+                <!--  <div class="text-right">
+                   <small>
+                      <%= room_message.created_at %>
+                    </small>
+                  </div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        <% else %>
         <div class="chat-message-container">
-          <div class="row no-gutters">
+          <div class="row no-gutters ">
             <div class="col-auto text-center">
               <img src="<%= room_message.user.gravatar_url %>" class="avatar" alt="">
             </div>
 
             <div class="col">
-              <div class="message-content">
-                <p class="mb-1">
+              <div class="message-content2">
+                <p class="mb-2">
                   <%= room_message.message %>
                 </p>
 
@@ -31,6 +54,7 @@
             </div>
           </div>
         </div>
+        <% end %>
       <% end %>
     </div>
 

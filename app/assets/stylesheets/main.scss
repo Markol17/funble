@@ -1,11 +1,18 @@
 body{
   background-color: #212223;
+  .logo{
 
+  }
   .container-fluid{
     overflow: hidden;
   }
-  h1{
-    color: white;
+  .input-box{
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.37);
+    .input-box-p{
+      color: white;
+    }
   }
   .navbar-default{
       background-color:#1D1D1F;
@@ -49,6 +56,15 @@ body{
         border-radius:30px;
         background-image: linear-gradient(to right, #C98630 , #CA5031);
         color: white;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.37);
+      }
+      .message-content2 {
+        padding: 3px;
+        max-width: 450px;
+        border-radius:30px;
+        background-color: #f9f9f9;
+        color: black;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.37);
       }
 
       & + .chat-message-container {
@@ -61,4 +77,19 @@ body{
     border-top: 0 none;
     border-radius: 0 0 0 0;
   }
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #212223;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #313335;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3d4042;
+
 }

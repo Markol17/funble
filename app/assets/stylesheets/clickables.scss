@@ -1,0 +1,44 @@
+.simple_form input{
+	background-color: transparent;
+	font-size:14px;
+	padding:20px 0 20px 0;
+	color:  #ffffff;
+	outline:none;
+	border:none;
+	border-bottom:1px solid #3D4042;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.37);
+  margin-bottom: 20px;
+}
+.simple_form input:hover{
+	border-bottom:1px solid #36383A;
+
+}
+.simple_form input:focus{
+	border-bottom:1px solid orange;
+  background-color: transparent;
+
+   transition: all .25s ease;
+   outline: none;
+
+}
+.simple_form button{
+  background-color:transparent;
+	font-size: 14px;
+  font-weight: bold;
+	color:  #ffffff;
+  text-align: center;
+  width:115px;
+	height: 35px;
+	text-decoration: none;
+
+	outline: none;
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.37);
+  transition: background-color 0.15s ease;
+
+}
+.simple_form button:hover{
+  background-color: #313335;
+  box-shadow: 6px 7px 15px rgba(0, 0, 0, 0.37);
+  transition: box-shadow 0.15s ease;
+
+}
